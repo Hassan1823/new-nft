@@ -58,10 +58,10 @@ console.log(`⚙ Creating NFT ...`);
 const mint = generateSigner(umi);
 
 // make the transaction to make the NFT
-const transaction = await createNft({
+const transaction = await createNft(umi, {
   mint,
   name: "My NFT",
-  uri: "",
+  uri: "https://raw.githubusercontent.com/Hassan1823/new-nft/refs/heads/main/nft-metadata.json",
   sellerFeeBasisPoints: percentAmount(0),
   collection: { key: collectionAddress, verified: false },
   //   tokenType: " mint",
